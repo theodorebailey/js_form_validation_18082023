@@ -16,31 +16,34 @@
 
             <div class="input-group">
                 <label for="">Full Name:</label>
-                <input type="text" placeholder="Enter your name: ">
+                <input type="text" placeholder="Enter your name: " id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
             </div>
 
             <div class="input-group">
                 <label for="">Phone Number: </label>
-                <input type="tel" placeholder="020 8348 1995">
+                <input type="tel" placeholder="020 8348 1995" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
             </div>
 
             <div class="input-group">
                 <label for="">Email Address</label>
-                <input type="email" placeholder="Enter Email">
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
             </div>
 
             <div class="input-group">
                 <label for="">Your Message</label>
-                <input type="text" rows="5" placeholder="Enter your message...">
+                <textarea type="text" rows="5" placeholder="Enter your message..." id="contact-message" onkeyup="validateMessage()"></textarea></textarea>
+                <span id="message-error"></span>
             </div>
 
-             <button>Submit</button>
-
-
-
-
+             <button onclick="return validateForm()">Submit</button>
+             <span id="submit-error"></span>
         </form>
     </div>
+
+    <script src="js.js"></script>
     
 </body>
 </html>
