@@ -1,9 +1,12 @@
+/* set defaults for page */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+/* set container to cover full page, create a background colour, display flex and center items */
 .container{
     width: 100%;
     height: 100vh;
@@ -13,18 +16,22 @@
     justify-content: center;
 }
 
+/* positioning absolute relative to page with top and right positions */
 .useful-links{
     position: absolute;
     top: 5%;
     right: 5%;
 
 }
+
+/* display block and text colour with text decorations */
 .useful-links a{
     display: block;
     color: #fff;
     text-decoration: none;
 }
 
+/* set width and max width with some padding background and rounded edges and some shadowing */
 .container form{
     width: 90%;
     max-width: 500px;
@@ -34,6 +41,8 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     position: relative;
 }
+
+/* create icon positioning */
 .fa-paper-plane{
     position: absolute;
     top: 0;
@@ -46,6 +55,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* create input group to cover full width and align */
 .input-group{
     width: 100%;
     display: flex;
@@ -53,9 +63,13 @@
     margin: 10px 0;
     position: relative;
 }
+
+/* flex basis is new to me */
 .input-group label{
     flex-basis: 28%;
 }
+
+/* select felx basis and background  */
 .input-group input, .input-group textarea{
     flex-basis: 68%;
     background: transparent;
@@ -66,10 +80,13 @@
     color: #333;
     font-size: 16px;
 }
+
+/* pseudo element selector */
 ::placeholder{
     font-size: 14px;
 }
 
+/* create form button styling */
 form button{
     background: #141a34;
     color: #fff;
@@ -91,10 +108,12 @@ form button{
     color: red;
 }
 
+/* error colouring */
 #submit-error{
     color: red;
 }
 
+/* success colouring */
 .input-group span i{
     color: green;
 }
