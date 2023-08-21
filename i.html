@@ -8,41 +8,75 @@
     <script src="https://kit.fontawesome.com/a09ac47364.js" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/a09ac47364.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
 
+    <!-- create the container for our app -->
     <div class="container">
+        <!-- create a form element to house our functionality -->
         <form>
-
+            <!-- create a font icon for our form to sit at top -->
             <i class="fas fa-paper-plane"></i>
-
+            <!-- create a div for house our name validation -->
             <div class="input-group">
+                <!-- create a label -->
                 <label for="">Full Name:</label>
+                <!-- create an input form with placeholder and type being text and create an ID to idenfity it in our JS and create a onkeyup method to apply a function -->
                 <input type="text" placeholder="Enter your name: " id="contact-name" onkeyup="validateName()">
+                <!-- create a span element with an id to apply our identifer for success -->
                 <span id="name-error"></span>
             </div>
 
+            <!-- create an input-group div -->
             <div class="input-group">
+                <!-- create our label -->
                 <label for="">Phone Number: </label>
+                <!-- create our input type
+                    type = tel for telephone
+                    id to identify in JS
+                    onkeyup functionality to execute function
+                 -->
                 <input type="tel" placeholder="020 8348 1995" id="contact-phone" onkeyup="validatePhone()">
+                <!-- create our span element to populate with success icon -->
                 <span id="phone-error"></span>
             </div>
 
+            <!-- create our input div element to house or validation for email -->
             <div class="input-group">
+                <!-- create a label to indicate to user -->
                 <label for="">Email Address</label>
+                <!-- create an input form 
+                    type email 
+                    id to add JS functionality 
+                    onkeyup to execute a function validate
+                -->
                 <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <!-- create a span to identify email success -->
                 <span id="email-error"></span>
             </div>
 
+            <!-- create another input container -->
             <div class="input-group">
+                <!-- create a label to indicate to user -->
                 <label for="">Your Message</label>
+                <!-- create a textarea to right user comments
+                    add a placeholder
+                    add an ID
+                    add a onkeyup functionality
+                 -->
                 <textarea type="text" rows="5" placeholder="Enter your message..." id="contact-message" onkeyup="validateMessage()"></textarea></textarea>
+                <!-- add a span element to add an image to indicate successful addition -->
                 <span id="message-error"></span>
             </div>
 
+            <!-- create a button to submit our form
+                validate form will validate if all pass back true and then submit
+             -->
              <button onclick="return validateForm()">Submit</button>
+             <!-- will provide indication as to form success -->
              <span id="submit-error"></span>
         </form>
     </div>
-
+    <!-- our js file attached -->
     <script src="js.js"></script>
     
 </body>
